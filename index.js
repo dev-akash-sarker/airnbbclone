@@ -1,15 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const userRoutes = require("./controller/useRoutes");
+const userRoutesTwo = require("./controller/useAnotherRoutes");
 const app = express();
 // middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 app.get("/", userRoutes);
-app.get("/hi", function (req, res) {
-  res.send("hello world");
-});
+app.get("/", userRoutesTwo);
 // app.get("/users", function (req, res) {
 //   res.json([
 //     {
