@@ -1,11 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-const { v4: uuidv4 } = require("uuid");
 const app = express();
-const uuid = uuidv4();
 // middleware
 app.use(cors());
-console.log(uuid);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.get("/users", function (req, res) {
