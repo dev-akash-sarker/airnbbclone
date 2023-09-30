@@ -6,7 +6,11 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.get("/", function (req, res) {
-  res.send("Hello World");
+  res.json({
+    id: "3537c9a0-f85b-49f7-ab01-caa6b6fb0e6a",
+    firstname: "Francisco ",
+    lastname: "B. Sanchez",
+  });
 });
 app.get("/users", function (req, res) {
   res.json([
