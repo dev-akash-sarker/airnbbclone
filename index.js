@@ -222,7 +222,7 @@ app.get("/pools", function (req, res) {
     },
   ]);
 });
-app.get("/countrySide", function (req, res) {
+app.get("/countryside", function (req, res) {
   res.json([
     {
       id: "c41bb523-f87d-4b17-a4e0-8d03822b41d0",
@@ -280,6 +280,10 @@ app.get("/countrySide", function (req, res) {
       created: "Jul 22 2023",
     },
   ]);
+});
+
+app.get("*", function (req, res) {
+  res.send("404 - Not Found");
 });
 
 app.listen(8000);
