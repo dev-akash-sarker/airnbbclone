@@ -8,7 +8,7 @@ app.use(cors());
 console.log(uuid);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.post("/users", function (req, res) {
+app.get("/users", function (req, res) {
   res.json([
     {
       id: "3537c9a0-f85b-49f7-ab01-caa6b6fb0e6a",
