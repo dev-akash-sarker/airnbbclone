@@ -6,6 +6,7 @@ const uuid = uuidv4();
 // middleware
 app.use(cors());
 console.log(uuid);
+app.use(express.urlencoded({ extended: true }));
 app.get("/users", function (req, res) {
   res.json([
     {
